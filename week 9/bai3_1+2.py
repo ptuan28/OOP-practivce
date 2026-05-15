@@ -18,9 +18,9 @@ class Point :
         self.__y += dy
     
     def getX(self):
-        return self.__x
+        return self._x
     def getY(self):
-        return self.__y
+        return self._y
     
     def distance(self , P = None):
         if P is None:

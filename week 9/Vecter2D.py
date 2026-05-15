@@ -1,26 +1,18 @@
-class Vector2D:
-    def __init__(self, x: int, y: int):
+
+class Vector2D :
+    def __init__(self, x , y):
         self.x = x
         self.y = y
-
+        
     def __add__(self, other):
-        # Cộng hai vector: (x1+x2, y1+y2)
         return Vector2D(self.x + other.x, self.y + other.y)
-
     def __sub__(self, other):
-        # Trừ hai vector: (x1-x2, y1-y2)
         return Vector2D(self.x - other.x, self.y - other.y)
-
     def __neg__(self):
-        # Đảo dấu vector: (-x, -y)
         return Vector2D(-self.x, -self.y)
-
     def __eq__(self, other):
-        # So sánh bằng: True nếu cả x và y đều bằng nhau
         if not isinstance(other, Vector2D):
             return False
         return self.x == other.x and self.y == other.y
-
     def __str__(self):
-        # Định dạng chuỗi: (x, y) - Chú ý dấu cách sau dấu phẩy
         return f"({self.x}, {self.y})"
